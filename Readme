@@ -1,8 +1,7 @@
----------------------------------------------
---TEST FRAMEWORK--(with parallel execution)--
-	  -----------My-Project-1-----------
------------uk.co.automationtesting-----------
----------------------------------------------
+------------------------------------------------------
+--Selenium TEST FRAMEWORK--(with parallel execution)--
+---------------uk.co.automationtesting----------------
+------------------------------------------------------
 Summary:
 Run automation testing on https://automationtesting.co.uk/
 Used Selenium in a Java Maven project
