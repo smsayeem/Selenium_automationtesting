@@ -3,6 +3,17 @@
 	  -----------My-Project-1-----------
 -----------uk.co.automationtesting-----------
 ---------------------------------------------
+Summary:
+Run automation testing on https://automationtesting.co.uk/
+Used Selenium in a Java Maven project
+Used TestNG to run test and ExtentReports for reporting
+Used ApachePOI to read excel data (username and password) for login
+Used multi-thread for parallel execution
+Used PageObject model
+Finally used Genkins for Continuous integration (CI)
+
+
+Steps:
 
 1. Create Maven project
 2. Configure POM.xml file and add dependencies
