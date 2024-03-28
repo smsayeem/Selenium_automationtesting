@@ -1,0 +1,18 @@
+A summary for Eclipse shortcuts:
+
+Copy:
+Ctrl+Alt+down: copies current line or selected lines to below
+Ctrl+Alt+up: copies current line or selected lines to above
+
+Move:
+Alt+up: moves current line or selected lines to above
+Alt+down: moves current line or selected lines to below
+
+Split editor window:
+Ctrl + Shift + - (accessing _) for split horizontally, and
+Ctrl + Shift + [ (accessing {) for split vertically.
+
+
+
+Ctl-Shift-L: brings up a List of shortcut keys
+Window/Preferences - General/Keys: allows you to modify the lot

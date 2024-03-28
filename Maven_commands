@@ -1,0 +1,33 @@
+Section -1: Creating maven project
+# Create a maven project via cli
+STEP1:
+Go to workspace directory:
+mvn archetype:generate -DgroupId=uk.co.automationtesting -DartifactId=my-project-1 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+STEP2:
+Go to the project directory:
+mvn eclipse:eclipse
+
+STEP3:
+Go to Eclipse->File->Import->Maven-> Existing Maven projects->Next->Browse->Select the project->Finish
+----------------------------------------------------------------------------------
+
+Section -2: TestNG
+
+# Run all the test classes
+mvn test
+
+# Run a single test class
+mvn -Dtest=DemoTest1 test
+
+# Run multiple test classes
+mvn -Dtest= L08_Profile,L07_Surefire test
+
+# Run a single test method
+$ mvn -Dtest=L08_Profile#testng test
+
+# Run all test methods that match pattern 't*' from L08_Profile class
+$ mvn -Dtest=L08_Profile#t* test
+
+# Run all test methods match pattern 't*' and 'e*'from L08_Profile class
+$ mvn -Dtest=L08_Profile#t*+e* test

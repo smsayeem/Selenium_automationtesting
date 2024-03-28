@@ -1,0 +1,19 @@
+JDK:
+java 17.0.8 2023-07-18 LTS
+Java(TM) SE Runtime Environment (build 17.0.8+9-LTS-211)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.8+9-LTS-211, mixed mode, sharing)
+
+Add JAVA_HOME and PATH variable
+(System properties->Advance->Environment Variables)
+
+Maven:
+Apache Maven 3.9.1 (2e178502fcdbffc201671fb2537d0cb4b4cc58f8)
+Maven home: C:\ProgramData\chocolatey\lib\maven\apache-maven-3.9.1
+Java version: 17.0.8, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-17
+Default locale: en_AU, platform encoding: Cp1252
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+Add MVN_HOME
+
+Selenium-java : 4.18.1
+TestNG : 7.7.0
+Jenkins 2.440.1 LTS 

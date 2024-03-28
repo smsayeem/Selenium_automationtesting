@@ -1,0 +1,67 @@
+---------------------------------------------
+--TEST FRAMEWORK--(with parallel execution)--
+	  -----------My-Project-1-----------
+-----------uk.co.automationtesting-----------
+---------------------------------------------
+
+1. Create Maven project
+2. Configure POM.xml file and add dependencies
+	selenium
+	testng (remove scope <scope>test</scope>, so that it will available available everywhere)
+	add testng.xml file [inside surefire plugin] 
+	(this file can be created from testclass->Convert to TestNG Test)
+3. Create resources/config.properties file [add global variables]
+4. Create BasePage class
+	src/main/java/base
+		/BasePage.java (provides browser driver and url)
+		/WebDriverInstance.java (to get and set threads)
+		/Hooks.js (take care of @BeforeTest, @AfterTest annotation for all test classes)
+[This class will be extended in every Test classes, which initiates browser driver and url]
+		
+5. Create  page classes (contains page locator variables)
+	src/main/java/pageObject
+		/Homepage.java
+		/OrderFormDelivery.java
+		/OrderFormPayment
+		/OrderFormPersonalInfo
+		/OrderFormShippingMethod
+		/ShopContentPannel
+		/ShopHomePage
+		/ShoppingCart
+		/ShopProductPage
+[these classed contains all locators for each page, if any locator is changed in a page,
+we just need to update that locator for a particular page, its called Page Object model]
+6. Create Test classes to run test via TestNg
+	src/test/java/[default]
+		/OrderCompleteTest.java (end-to-end journey)
+		/AddRemoveItemBasketTest (add item in the cart and remove)
+[Add test annotation to run test i.e. @BeforeTest, @AfterTest, @Test]
+[test can be run directly from the class itself (Run->TestNG) or convert the classes onto TestNG (testng.xml)]
+
+7. Take snapshot of the failed test
+	Create listener class
+	src/main/java/resources
+		/Listener.java
+8. Parallel execution using multiple threads
+	/testng.xml, update suite as follows
+	<suite name="Suite" parallel="tests" thread-count="2">
+9. Jenkins CI-Contineous Integration 
+	[Read the readme.txt file selenium/resouces/jenkins/readme.txt]
+	Copy the project folder into jenkins folder[C:\Users\sam sadot\.jenkins] to see it in jenkins
+	Run jenkins:
+	Go to the directory where we have downloaded the jenkins.war file  [C:\Users\sam sadot\OneDrive\Desktop\Software Testing\Selenium\Resources\Jenkins]
+		cmd-> java -jar jenkins.war [enter]
+	(finally, it will says 'Jenkins is fully up and running')
+	open browser and go to http://localhost:8080/
+	
+10. Extent Reports
+	- Add extent reports into the POM file to download
+	- create class under
+	- src/main/java/ExtentManager.java
+	
+	BasePage.java <--- Hooks.java	<--- 	AddRemoveBasketTest.java, 
+									<---	OrderCompleteTest.java
+		^										^
+		|										|
+		|										|
+	ExtentManager.java						Listeners.java

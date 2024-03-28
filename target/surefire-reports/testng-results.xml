@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-17T16:07:33 AEDT" name="Suite" finished-at="2024-03-17T16:08:04 AEDT" duration-ms="31051">
+    <groups>
+    </groups>
+    <test started-at="2024-03-17T16:07:33 AEDT" name="AddRemoveItemBasketTest" finished-at="2024-03-17T16:08:02 AEDT" duration-ms="28833">
+      <class name="uk.co.automationtesting.AddRemoveItemBasketTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:uk.co.automationtesting.AddRemoveItemBasketTest@57c758ac]" started-at="2024-03-17T16:07:33 AEDT" name="setup" finished-at="2024-03-17T16:07:41 AEDT" duration-ms="7922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addRemoveItem()[pri:0, instance:uk.co.automationtesting.AddRemoveItemBasketTest@57c758ac]" started-at="2024-03-17T16:07:41 AEDT" name="addRemoveItem" finished-at="2024-03-17T16:08:01 AEDT" duration-ms="20211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addRemoveItem -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:uk.co.automationtesting.AddRemoveItemBasketTest@57c758ac]" started-at="2024-03-17T16:08:01 AEDT" name="tearDown" finished-at="2024-03-17T16:08:02 AEDT" duration-ms="634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- uk.co.automationtesting.AddRemoveItemBasketTest -->
+    </test> <!-- AddRemoveItemBasketTest -->
+    <test started-at="2024-03-17T16:07:33 AEDT" name="OrderCompleteTest" finished-at="2024-03-17T16:08:04 AEDT" duration-ms="31051">
+      <class name="uk.co.automationtesting.OrderCompleteTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:uk.co.automationtesting.OrderCompleteTest@2ea227af]" started-at="2024-03-17T16:07:33 AEDT" name="setup" finished-at="2024-03-17T16:07:41 AEDT" duration-ms="8011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="endToEndTest()[pri:0, instance:uk.co.automationtesting.OrderCompleteTest@2ea227af]" started-at="2024-03-17T16:07:41 AEDT" name="endToEndTest" finished-at="2024-03-17T16:08:04 AEDT" duration-ms="22730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endToEndTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:uk.co.automationtesting.OrderCompleteTest@2ea227af]" started-at="2024-03-17T16:08:04 AEDT" name="tearDown" finished-at="2024-03-17T16:08:04 AEDT" duration-ms="293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- uk.co.automationtesting.OrderCompleteTest -->
+    </test> <!-- OrderCompleteTest -->
+  </suite> <!-- Suite -->
+</testng-results>
