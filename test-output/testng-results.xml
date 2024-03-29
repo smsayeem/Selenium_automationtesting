@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-24T14:39:03 AEDT" name="Default suite" finished-at="2024-03-24T14:39:22 AEDT" duration-ms="18919">
+  <suite started-at="2024-03-29T12:21:49 AEDT" name="Default suite" finished-at="2024-03-29T12:22:06 AEDT" duration-ms="17586">
     <groups>
     </groups>
-    <test started-at="2024-03-24T14:39:03 AEDT" name="Default test" finished-at="2024-03-24T14:39:22 AEDT" duration-ms="18919">
+    <test started-at="2024-03-29T12:21:49 AEDT" name="Default test" finished-at="2024-03-29T12:22:06 AEDT" duration-ms="17586">
       <class name="uk.co.automationtesting.ShopLoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:uk.co.automationtesting.ShopLoginTest@1623b78d]" started-at="2024-03-24T14:39:04 AEDT" name="setup" finished-at="2024-03-24T14:39:09 AEDT" duration-ms="5491" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:uk.co.automationtesting.ShopLoginTest@1623b78d]" started-at="2024-03-29T12:21:49 AEDT" name="setup" finished-at="2024-03-29T12:21:54 AEDT" duration-ms="4976" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:uk.co.automationtesting.ShopLoginTest@1623b78d]" started-at="2024-03-24T14:39:09 AEDT" name="login" finished-at="2024-03-24T14:39:22 AEDT" duration-ms="12796" status="FAIL">
+        <test-method signature="login()[pri:0, instance:uk.co.automationtesting.ShopLoginTest@1623b78d]" started-at="2024-03-29T12:21:54 AEDT" name="login" finished-at="2024-03-29T12:22:06 AEDT" duration-ms="12015" status="FAIL">
           <exception class="java.lang.AssertionError">
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError
@@ -52,7 +52,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:uk.co.automationtesting.ShopLoginTest@1623b78d]" started-at="2024-03-24T14:39:22 AEDT" name="tearDown" finished-at="2024-03-24T14:39:22 AEDT" duration-ms="218" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:uk.co.automationtesting.ShopLoginTest@1623b78d]" started-at="2024-03-29T12:22:06 AEDT" name="tearDown" finished-at="2024-03-29T12:22:06 AEDT" duration-ms="185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

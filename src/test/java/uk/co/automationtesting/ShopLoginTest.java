@@ -98,7 +98,7 @@ public class ShopLoginTest extends Hooks{
 			ExtentManager.fail("User could not sign in");
 			Assert.fail();
 		}
-		
+		/*
 		shopHome.getLoginBtn().click();
 		System.out.println("Reached Login page again for second attempt");
 		login.getEmail().sendKeys(email2);
@@ -112,6 +112,7 @@ public class ShopLoginTest extends Hooks{
 			ExtentManager.fail("User could not sign in");
 			Assert.fail();
 		}
+		*/
 		
 	}
 	

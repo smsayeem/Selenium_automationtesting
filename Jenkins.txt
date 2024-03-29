@@ -1,0 +1,116 @@
+
+Step 1:Download Jenkins and run it in the terminal
+Need to download jenkins.war file (/resources/jenkins/jenkins.war)
+Run Jenkins in the terminal:
+cmd: java -jar jenkins.war
+[server will be continuously running...]
+(collect the admin password) Jenkins admin password: 97db0fd33c394bcb9d5beb40c8d5abaf
+
+Step 2:Launch Jenkins localhost and create testing account
+
+Browser-> localhost:8080 (jenkins admin page), 
+unlock jenkins by the given admin password, 
+then create user account
+	username: admin
+	password: Abc123
+	fullname: tester
+	email: test@test.com
+	
+Step 3: Install plugins and configure paths
+
+then install suggested plugins and configure paths.
+configure following paths
+	java/jdk
+	maven
+	git
+
+Name: java 17.0.8
+JAVA_HOME: C:\Program Files\Java\jdk-17
+(can be found, System properties->Advance->Environment Variables)
+
+Name: apache-maven-3.9.1
+MAVEN_HOME:C:\ProgramData\chocolatey\lib\maven\apache-maven-3.9.1
+
+name: myGit
+Path to Git executable: C:\Program Files\Git\bin\git.exe
+
+Install additional plugins ( Maven, git, github...)
+
+		Maven Integration
+		Pipeline maven integration
+		all git related plugins...
+
+Step 4: Create Jenkins task and choose either local or remote repository project
+
+Local repository (source code):
+---------------------------------
+Step 1: Need to copy and paste the project into jenkins directory (C:\Users\sam sadot\.jenkins)
+Dashboard->New Item->
+Enter name and select 'Freestyle project', click OK
+Under Configuration
+	General->Advance: 
+		Tick Use custom workspace->Directory:${JENKINS_HOME}/my-project-1
+	Build Steps->Add build step:
+		select Invoke top-level Maven targets (it will be looking my pom.xml file)
+		Maven version: select from drop down
+		Goals: compile test
+(it will compile my source code and run test or execute my framework)
+
+Remote Repo (github - source code):
+--------------------------------------------
+Dashboard->New Item->
+Enter name and select 'Maven project', click OK
+Under Configuration
+	Source code management:
+		Git
+		Repository URL: https://github.com/smsayeem/Selenium_automationtesting.git
+	Build
+		Root POM: pom.xml
+		Goals and options: test
+SAVE
+
+Step 5: Run task from dashboard:
+--------------------------------
+Dashboard:
+select the project -> Build now
+(it will build and run my tests and gives summary)
+select the build history to see further details.
+
+Step 5: Postbuild actions - Reporting:
+---------------------------------------
+Add Plugins:
+----------------
+Dashboard->Manage Jenkins->Plugins->Available plugins
+type 'html' in the searchbox and select 'HTML Publisher' and click Install and wait for success.
+Dashboard->Select the Job->Configure->Post-build actions->Publish HTML reports->Add->
+Directory= extent_reports/
+Index page= *.html
+Save
+Restart Jenkins from cmd
+build the project again and 'HTML report' will be visible 
+(report format style might be not good looking due to jenkins security issue)
+Fix:Dashboard->Manage Jenkins->Script console and add the script
+----
+System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP");
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *");
+----
+Run
+Then,
+Dashboard, select project ->HTML Report
+we acn see Extent Reports :)
+
+Periodic triggering:
+---------------------
+Jenkins allows to run test automatically and periodically (every day, hour, month etc)
+Setting a schedule (CRON Expression)
+min hour dayMonth month dayWeek
+30 03 * * *
+setup:
+select Job1->Configure->General->Build Triggers->select Build periodically
+* * * * *
+(it will run every minute)
+
+
+
+
+

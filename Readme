@@ -9,7 +9,9 @@ Used TestNG to run test and ExtentReports for reporting
 Used ApachePOI to read excel data (username and password) for login
 Used multi-thread for parallel execution
 Used PageObject model
-Finally used Genkins for Continuous integration (CI)
+Used git as version control and the project is available on github remote repo
+Finally linked Genkins with github for Continuous integration (CI)
+Can be access by http://localhost:8080/
 
 
 Steps:
@@ -56,13 +58,14 @@ we just need to update that locator for a particular page, its called Page Objec
 	/testng.xml, update suite as follows
 	<suite name="Suite" parallel="tests" thread-count="2">
 9. Jenkins CI-Contineous Integration 
-	[Read the readme.txt file selenium/resouces/jenkins/readme.txt]
+	[Read the file ./Jenkins.txt for Jenkins instructions]
 	Copy the project folder into jenkins folder[C:\Users\sam sadot\.jenkins] to see it in jenkins
 	Run jenkins:
 	Go to the directory where we have downloaded the jenkins.war file  [C:\Users\sam sadot\OneDrive\Desktop\Software Testing\Selenium\Resources\Jenkins]
 		cmd-> java -jar jenkins.war [enter]
 	(finally, it will says 'Jenkins is fully up and running')
 	open browser and go to http://localhost:8080/
+	admin/A..3
 	
 10. Extent Reports
 	- Add extent reports into the POM file to download
